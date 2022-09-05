@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:myt_weatherapp/api/weatherapi.dart';
 import 'package:myt_weatherapp/components/constants.dart';
@@ -14,7 +12,6 @@ class Dashboard extends StatelessWidget {
     var position = await GetPosition();
     var weatherList = await client.getWeather();
     weather = Weather.GetNearestWeatherData(position, weatherList);
-    // print(weather.locality);
     return weather;
   }
 
@@ -31,7 +28,7 @@ class Dashboard extends StatelessWidget {
                 Container(
                   height: size.height * 1.0,
                   width: size.width,
-                  padding: EdgeInsets.only(top: 30),
+                  padding: EdgeInsets.only(top: 50),
                   margin: EdgeInsets.only(right: 10, left: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
@@ -57,15 +54,11 @@ class Dashboard extends StatelessWidget {
                             fontSize: 13,
                             fontWeight: FontWeight.w100),
                       ),
-
-                      /*
-                  Image.asset(
-                    '',
-                    width: size.width * 0.4,
-                  ),
-
-                  */
-
+                      Image.network(
+                        // 'https:${weather?.iconUrl}',
+                        'https://openweathermap.org/img/wn/10d@2x.png',
+                        width: size.width * 0.4,
+                      ),
                       Text(
                         '${weather?.maxTemperature}°',
                         style: TextStyle(
@@ -77,10 +70,47 @@ class Dashboard extends StatelessWidget {
                         '${weather?.name}',
                         style: TextStyle(
                             color: kPrimaryLightColor,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w100),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w300),
                       ),
                       Container(
+                        padding: EdgeInsets.only(top: 60),
+                        child: Column(
+                          children: [
+                            Text(
+                              'Humidity: ${weather?.humidity}',
+                              style: TextStyle(
+                                  color: kPrimaryLightColor,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                            Text(
+                              'Minimum Temperature: ${weather?.minTemperature}°',
+                              style: TextStyle(
+                                  color: kPrimaryLightColor,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                            Text(
+                              'Maximum Temperature: ${weather?.maxTemperature}°',
+                              style: TextStyle(
+                                  color: kPrimaryLightColor,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                            Text(
+                              'Last Updated Time: ${weather?.lastUpdateTime}',
+                              style: TextStyle(
+                                  color: kPrimaryLightColor,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          ],
+                        ),
+                      ),
+                      /*
+                      Container(
+                        padding: EdgeInsets.only(top: 180),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -123,6 +153,7 @@ class Dashboard extends StatelessWidget {
                           ],
                         ),
                       ),
+                    */
                     ],
                   ),
                 ),

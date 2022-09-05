@@ -44,21 +44,6 @@ class Weather {
     double possibleDistance = 0;
 
     for (var w = 0; w < weatherList.length; w++) {
-      /*
-      const R = 6371e3; // metres
-      var lat1 = latitude * pi/180; // φ, λ in radians
-      var lat2 = weatherList[w].latitude * pi/180;
-      var latDiff = (latitude-weatherList[w].latitude) * pi/180;
-      var lonDiff = (longitude - weatherList[w].longitude) * pi/180;
-
-      var a = sin(latDiff/2) * sin(latDiff/2) +
-              cos(latDiff) * cos(latDiff) *
-              sin(lonDiff/2) * sin(lonDiff/2);
-      var c = 2 * atan2(sqrt(a), sqrt(1-a));
-
-      var d = R * c; // in metres
-
-*/
       double distance = haversine(latitude, longitude, weatherList[w].latitude,
           weatherList[w].longitude);
 

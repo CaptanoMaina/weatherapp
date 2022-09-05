@@ -108,52 +108,6 @@ class Dashboard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      /*
-                      Container(
-                        padding: EdgeInsets.only(top: 180),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              child: Text(
-                                'Home',
-                                style: TextStyle(
-                                    color: kPrimaryLightColor,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w100),
-                              ),
-                            ),
-                            Container(
-                              child: Text(
-                                'Alerts ',
-                                style: TextStyle(
-                                    color: kPrimaryLightColor,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w100),
-                              ),
-                            ),
-                            Container(
-                              child: Text(
-                                'Emergenct Info ',
-                                style: TextStyle(
-                                    color: kPrimaryLightColor,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w100),
-                              ),
-                            ),
-                            Container(
-                              child: Text(
-                                'Support ',
-                                style: TextStyle(
-                                    color: kPrimaryLightColor,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w100),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    */
                     ],
                   ),
                 ),

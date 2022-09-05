@@ -1,15 +1,13 @@
-import 'dart:async';
-import 'dart:convert';
-import 'dart:isolate';
-
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:myt_weatherapp/components/constants.dart';
+import 'package:flutter/services.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myt_weatherapp/components/constants.dart';
 import 'package:myt_weatherapp/screens/dashboard.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(const MytApp());
 }
 
@@ -20,13 +18,13 @@ class MytApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Myt Weather',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // primarySwatch:kAccentColor
-        textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme,
-        ),
-      ),
-      home: const Dashboard(),
+          textTheme: GoogleFonts.poppinsTextTheme(
+            Theme.of(context).textTheme,
+          ),
+          scaffoldBackgroundColor: kBackgroundColor),
+      home: Dashboard(),
     );
   }
 }

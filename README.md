@@ -1,16 +1,18 @@
-# myt_weatherapp
+# Myt Weather Application
 
-A new Flutter project.
+A Myt Weather Updates Application.
 
-## Getting Started
+## Project Documentation
 
-This project is a starting point for a Flutter application.
+This project is implemented using the flutter framework.
 
-A few resources to get you started if this is your first Flutter project:
+### How it works
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+A users current location is obtained and a connection is made to the API to retrieve weather information about that location.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+These resources were used for the successful development project:
+
+- [Flutter Documentation](https://docs.flutter.dev)
+- [Dart Documentation](https://dart.dev)
+- [Harvesine Formula in Dart](https://rosettacode.org/wiki/Haversine_formula#Dart)
+- [Calculate distance between Latitude and Longitude points](https://www.movable-type.co.uk/scripts/latlong.html)

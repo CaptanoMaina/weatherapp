@@ -19,6 +19,17 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: kBackgroundColor,
+          selectedItemColor: kAccentColor,
+          unselectedItemColor: kPrimaryLightColor,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.dashboard), label: "Dashboard"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.emergency), label: "Emergency"),
+            BottomNavigationBarItem(icon: Icon(Icons.support), label: "Support")
+          ]),
       body: FutureBuilder(
         future: info(),
         builder: ((context, snapshot) {
@@ -26,10 +37,10 @@ class Dashboard extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height: size.height * 1.0,
+                  height: size.height * 0.85,
                   width: size.width,
                   padding: EdgeInsets.only(top: 50),
-                  margin: EdgeInsets.only(right: 10, left: 10),
+                  margin: EdgeInsets.only(top: 50, right: 10, left: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
                     gradient: LinearGradient(

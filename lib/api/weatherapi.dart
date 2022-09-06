@@ -16,7 +16,6 @@ class WeatherApi {
         .map((data) => Weather.fromJson(data))
         .toList();
 
-    print(weatherList[3].locality);
     return weatherList;
   }
 }

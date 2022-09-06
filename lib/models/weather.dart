@@ -61,9 +61,6 @@ class Weather {
       }
     }
 
-    print(latitude);
-    print(longitude);
-
     return weatherList[possibleWeather];
   }
 

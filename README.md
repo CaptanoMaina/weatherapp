@@ -1,6 +1,6 @@
-# Myt Weather Application
+# Weather Application
 
-A Myt Weather Updates Application.
+A Weather Updates Application.
 
 ## Project Documentation
 
